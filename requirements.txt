@@ -1,0 +1,7 @@
+Flask==2.0.3
+Flask-RESTful==0.3.8
+PyJWT==1.7.1
+Flask-SQLAlchemy==2.4.1
+psycopg2
+pandas
+gunicorn==20.1.0
