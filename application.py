@@ -13,7 +13,6 @@ import pandas as pd
 
 from sqlalchemy import create_engine, inspect
 from sqlalchemy import MetaData
-from sqlalchemy.orm import sessionmaker
 
 from utils import create_table
 
@@ -85,6 +84,7 @@ def upload(user):
             df = pd.read_csv(file, index_col=False)
             df['user_id'] = user_id
             df['filename'] = file.filename
+            # Note: using df.to_sql() is slow for very large files
             df.to_sql(table_name, engine, if_exists="append", index=False, method="multi")
     except Exception as e:
         log.exception(f"Error while loading data into table {table_name}")

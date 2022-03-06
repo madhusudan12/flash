@@ -29,3 +29,7 @@ docker-compose up --build
 ```
 
 Now the app is up, you can hit the API's
+
+Postman collection
+
+https://www.getpostman.com/collections/13529dc17074bdb36881
